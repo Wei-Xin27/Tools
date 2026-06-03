@@ -21,11 +21,19 @@ A lightweight network inspection image built on `debian:stable-slim`, designed f
 
 ---
 
+## Registry
+
+The image is hosted on Docker Hub at `wxpua/tools:netdebug`.
+
+```bash
+docker pull wxpua/tools:netdebug
+```
+
 ## Build
 
 ```bash
-docker build -t your-repo/netdebug:latest .
-docker push your-repo/netdebug:latest
+docker build -t wxpua/tools:netdebug .
+docker push wxpua/tools:netdebug
 ```
 
 ---
@@ -38,7 +46,7 @@ Launches an ephemeral pod that is automatically removed when you exit.
 
 ```bash
 kubectl run netdebug \
-  --image=your-repo/netdebug:latest \
+  --image=wxpua/tools:netdebug \
   --rm -it \
   --restart=Never
 ```
@@ -47,7 +55,7 @@ kubectl run netdebug \
 
 ```bash
 kubectl run netdebug \
-  --image=your-repo/netdebug:latest \
+  --image=wxpua/tools:netdebug \
   --rm -it \
   --restart=Never \
   --privileged \
@@ -58,7 +66,7 @@ kubectl run netdebug \
 
 ```bash
 kubectl run netdebug \
-  --image=your-repo/netdebug:latest \
+  --image=wxpua/tools:netdebug \
   --rm -it \
   --restart=Never \
   -n your-namespace
@@ -68,7 +76,7 @@ kubectl run netdebug \
 
 ```bash
 kubectl run netdebug \
-  --image=your-repo/netdebug:latest \
+  --image=wxpua/tools:netdebug \
   --rm -it \
   --restart=Never \
   --overrides='{"spec":{"nodeName":"node-1"}}'
@@ -77,7 +85,7 @@ kubectl run netdebug \
 ### Docker (local)
 
 ```bash
-docker run --rm -it your-repo/netdebug:latest
+docker run --rm -it wxpua/tools:netdebug
 ```
 
 ---
