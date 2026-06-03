@@ -32,7 +32,7 @@ docker pull wxpua/tools:netdebug
 ## Build
 
 ```bash
-docker build -t wxpua/tools:netdebug .
+docker buildx build .  --platform linux/amd64,linux/arm64 -t wxpua/tools:netdebug 
 docker push wxpua/tools:netdebug
 ```
 
