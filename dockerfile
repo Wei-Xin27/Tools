@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # HTTP clients
     curl \
     wget \
+    # Netcat
+    netcat-openbsd \
+    # Telnet
+    telnet \
     # ICMP / routing
     iputils-ping \
     traceroute \
